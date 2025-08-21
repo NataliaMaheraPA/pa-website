@@ -3,8 +3,8 @@ export const siteName = 'PettersonApps'
 export const defaultTitle = 'PettersonApps - Software Development Company'
 export const defaultDescription = 'Software development company from Ukraine.'
 
- // Default Open Graph/Twitter image: reuse existing round favicon
-export const ogImage = `${siteUrl}/favicon.png`
+ // Default Open Graph/Twitter image: use padded favicon to appear visually smaller
+export const ogImage = `${siteUrl}/favicon-social.png`
 
 export const defaultKeywords = [
   'software development',

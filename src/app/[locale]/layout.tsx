@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { headers } from 'next/headers'
 import { Locale, routing } from '@/lib/i18n/routing'
 import { notFound } from 'next/navigation'
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -11,19 +10,13 @@ import AuthWrapper from '@/components/AuthWrapper'
 import PreloadImages from '@/components/PreloadImagesWrapper'
 import JsonLd from '@/components/JsonLd'
 import images from '@/features/Portfolio/constants'
-import { defaultDescription, defaultKeywords, defaultTitle, organization, siteName, webSite } from '@/config/seo'
+import { ogImage, siteUrl, defaultDescription, defaultKeywords, defaultTitle, organization, siteName, webSite } from '@/config/seo'
 
 import '@/styles/globals.css'
 
 export async function generateMetadata(): Promise<Metadata> {
-	const hdrs = await headers()
-	const host = hdrs.get('x-forwarded-host') || hdrs.get('host') || 'pettersonapps.com'
-	const proto = hdrs.get('x-forwarded-proto') || 'https'
-	const origin = `${proto}://${host}`
-	const ogVersion = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 8) ?? 'v1'
-
 	return {
-		metadataBase: new URL(origin),
+		metadataBase: new URL(siteUrl),
 		title: defaultTitle,
 		description: defaultDescription,
 		keywords: defaultKeywords,
@@ -37,9 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			url: '/',
 			siteName: siteName,
 			type: 'website',
-			images: [
-				{ url: `${origin}/opengraph-image?v=${ogVersion}`, width: 1200, height: 630, alt: `${siteName} Open Graph image` },
-			],
+			images: [{ url: ogImage, alt: `${siteName} Open Graph image` }],
 		},
 		robots: { index: true, follow: true },
 	}
