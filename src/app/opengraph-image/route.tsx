@@ -3,9 +3,7 @@ import { siteUrl } from '@/config/seo'
 
 export const runtime = 'edge'
 
-export const alt = 'PettersonApps — Social preview'
-export const size = { width: 1200, height: 630 }
-export const contentType = 'image/png'
+// This route returns a social preview image
 
 export async function GET() {
   return new ImageResponse(
@@ -32,7 +30,7 @@ export async function GET() {
         />
       </div>
     ),
-    { ...size }
+    { width: 1200, height: 630 }
   )
 }
 
