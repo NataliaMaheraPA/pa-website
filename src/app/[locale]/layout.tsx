@@ -20,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	const host = hdrs.get('x-forwarded-host') || hdrs.get('host') || 'pettersonapps.com'
 	const proto = hdrs.get('x-forwarded-proto') || 'https'
 	const origin = `${proto}://${host}`
+	const ogVersion = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 8) ?? 'v1'
 
 	return {
 		metadataBase: new URL(origin),
@@ -37,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			siteName: siteName,
 			type: 'website',
 			images: [
-				{ url: `${origin}/opengraph-image`, width: 1200, height: 630, alt: `${siteName} Open Graph image` },
+				{ url: `${origin}/opengraph-image?v=${ogVersion}`, width: 1200, height: 630, alt: `${siteName} Open Graph image` },
 			],
 		},
 		robots: { index: true, follow: true },
