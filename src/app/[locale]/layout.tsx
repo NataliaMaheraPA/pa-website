@@ -10,7 +10,7 @@ import AuthWrapper from '@/components/AuthWrapper'
 import PreloadImages from '@/components/PreloadImagesWrapper'
 import JsonLd from '@/components/JsonLd'
 import images from '@/features/Portfolio/constants'
-import { defaultDescription, defaultKeywords, defaultTitle, organization, siteName, siteUrl, webSite } from '@/config/seo'
+import { ogImage, defaultDescription, defaultKeywords, defaultTitle, organization, siteName, siteUrl, webSite } from '@/config/seo'
 
 import '@/styles/globals.css'
 
@@ -29,15 +29,13 @@ export const metadata: Metadata = {
 		url: '/',
 		siteName: siteName,
 		type: 'website',
-		images: [
-			{ url: '/opengraph-image', width: 1200, height: 630, alt: `${siteName} Open Graph image` },
-		],
+		images: [{ url: ogImage, alt: `${siteName} Open Graph image` }],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: defaultTitle,
 		description: defaultDescription,
-		images: ['/opengraph-image'],
+		images: [ogImage],
 	},
 	robots: { index: true, follow: true },
 }
