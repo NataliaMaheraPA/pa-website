@@ -3,7 +3,6 @@ export const siteName = 'PettersonApps'
 export const defaultTitle = 'PettersonApps - Software Development Company'
 export const defaultDescription = 'Software development company from Ukraine.'
 
- // We can add a default company image for the open graph
 export const ogImage = `${siteUrl}/favicon-social.png`
 
 export const defaultKeywords = [
@@ -41,6 +40,7 @@ export const webSite = {
   '@type': 'WebSite',
   name: siteName,
   url: siteUrl,
+  logo: `${siteUrl}/favicon-social.png`,
   potentialAction: {
     '@type': 'SearchAction',
     target: `${siteUrl}/?q={search_term_string}`,
