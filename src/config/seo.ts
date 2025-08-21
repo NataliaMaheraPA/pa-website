@@ -4,7 +4,7 @@ export const defaultTitle = 'PettersonApps - Software Development Company'
 export const defaultDescription = 'Software development company from Ukraine.'
 
  // We can add a default company image for the open graph
-export const ogImage = `${siteUrl}/images/favicon-social.png`
+export const ogImage = `${siteUrl}/favicon-social.png`
 
 export const defaultKeywords = [
   'software development',

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from '@/components/JsonLd'
-import { createWebPageJsonLd, defaultDescription, defaultTitle, siteUrl } from '@/config/seo'
+import { createWebPageJsonLd, defaultDescription, defaultTitle, siteUrl, ogImage, siteName } from '@/config/seo'
 import Home from "@/features/Home";
 
 export const metadata: Metadata = {
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "PettersonApps",
     type: "website",
+    images: [{ url: ogImage, width: 1200, height: 630, alt: `${siteName} Open Graph image` }],
   },
   robots: { index: true, follow: true },
 };
