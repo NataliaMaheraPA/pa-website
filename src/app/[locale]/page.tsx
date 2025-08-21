@@ -5,11 +5,11 @@ import Home from "@/features/Home";
 
 export const metadata: Metadata = {
   title: "PettersonApps — Software Development Company",
-  description: "We build web, mobile, TV, and other solutions. Explore our portfolio and services.",
+  description: "We build web, mobile, TV, and AI solutions. Explore our portfolio and services.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "PettersonApps — Software Development Company",
-    description: "We build web, mobile, TV, and other solutions. Explore our portfolio and services.",
+    description: "We build web, mobile, TV, and AI solutions. Explore our portfolio and services.",
     url: "/",
     siteName: "PettersonApps",
     type: "website",

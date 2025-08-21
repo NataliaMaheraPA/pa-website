@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from '@/lib/i18n/routing'
 import styles from '@/features/Home/home.module.css'
 
 export function useSlideNavigate() {

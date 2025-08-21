@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import type { YouTubeProps } from 'react-youtube'
 
@@ -14,6 +14,21 @@ type YouTubePlayerProps = {
 
 const YouTubePlayer = ({ videoId, className, opts }: YouTubePlayerProps) => {
 	const [mounted, setMounted] = useState(false)
+	const mergedOpts = useMemo<YouTubeProps['opts']>(() => {
+		const origin = typeof window !== 'undefined' ? window.location.origin : undefined
+		return {
+			width: '100%',
+			height: '100%',
+			playerVars: {
+				autoplay: 0,
+				controls: 1,
+				modestbranding: 1,
+				rel: 0,
+				origin,
+			},
+			...opts,
+		}
+	}, [opts])
 
 	useEffect(() => setMounted(true), [])
 
@@ -24,12 +39,7 @@ const YouTubePlayer = ({ videoId, className, opts }: YouTubePlayerProps) => {
 			<YouTube
 				title='PettersonApps - YouTube video player'
 				videoId={videoId}
-				opts={{
-					width: '100%',
-					height: '100%',
-					playerVars: { autoplay: 0, controls: 1 },
-					...opts,
-				}}
+				opts={mergedOpts}
 			/>
 		</div>
 	)

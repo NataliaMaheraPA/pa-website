@@ -1,9 +1,17 @@
-import 'swiper/css'
+'use client'
 
+import dynamic from 'next/dynamic'
 import SectionTitle from '@/components/SectionTitle'
 import SlidesGrid from './components/SlidesGrid'
-import SlidesSwiper from './components/SlidesSwiper'
 import { AppearEffectWrapper } from '@/components/AppearEffectWrapper'
+
+import 'swiper/css'
+
+const SlidesSwiper = dynamic(() => import('./components/SlidesSwiper'), {
+  ssr: false,
+  loading: () => <div className="w-full min-h-[560px]" />
+})
+
 
 export default function About() {
 	return (

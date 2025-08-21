@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react'
 import type { Swiper as SwiperCore } from 'swiper/types'
 import { useSlideData } from '@/features/About/hooks/useSlideData'
@@ -16,6 +17,7 @@ export default function SlidesSwiper() {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const slideData = useSlideData()
 	const height = useResponsiveHeightValue()
+	const isDesktop = useMediaQuery({ minWidth: 1024 })
 
 	const totalSlides = slideData.length + 1 
 	const updateNavDisabled = (swiper: SwiperCore) => updateNavigationDisabled(swiper, totalSlides)
@@ -41,7 +43,9 @@ export default function SlidesSwiper() {
 				{/* Last slide */}
 				<SwiperSlide className={styles.swiperSlide}>
 					<div className='flex justify-center items-center w-full h-full bg-primary-dark'>
-						<YouTubePlayer className='mt-8 w-full' videoId={ABOUT_US_YOUTUBE_VIDEO_ID} opts={{ height: height }} />
+						{isDesktop ? (
+							<YouTubePlayer className='mt-8 w-full' videoId={ABOUT_US_YOUTUBE_VIDEO_ID} opts={{ height: height }} />
+						) : null}
 					</div>
 				</SwiperSlide>
 			</Swiper>

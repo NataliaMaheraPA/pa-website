@@ -19,7 +19,7 @@ export default function SlidesGrid() {
 			))}
 			{/* Last slide */}
 			<div className='flex justify-center items-center w-full bg-primary-dark mt-5'>
-				<YouTubePlayer className='w-full' videoId={ABOUT_US_YOUTUBE_VIDEO_ID} opts={{ height: height }} />
+				<YouTubePlayer className='w-full' videoId={ABOUT_US_YOUTUBE_VIDEO_ID} opts={{ height }} />
 			</div>
 		</div>
 	)
