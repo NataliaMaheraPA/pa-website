@@ -1,4 +1,4 @@
-export const siteUrl = 'https://pettersonapps-website.vercel.app'
+export const siteUrl = 'https://pettersonapps.com'
 export const siteName = 'PettersonApps'
 export const defaultTitle = 'PettersonApps - Software Development Company'
 export const defaultDescription = 'Software development company from Ukraine.'
