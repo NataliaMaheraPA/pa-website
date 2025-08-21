@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+@theme {
+	--font-manrope: 'Manrope', sans-serif;
+	--font-montserrat: 'Montserrat', sans-serif;
+	--font-chivo: 'ChivoMono', monospace;
+	--font-kyiv: 'KyivTypeSans', monospace;
+
+	--color-primary-green: var(--primary-green);
+	--color-secondary-green: var(--secondary-green);
+	--color-primary-purple: var(--primary-purple);
+	--color-primary-dark: var(--primary-dark);
+	--color-white: var(--white);
+
+	--breakpoint-xs: 320px;
+	--breakpoint-sm: 375px;
+	--breakpoint-m: 428px;
+	--breakpoint-md: 640px;
+	--breakpoint-l: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1440px;
+	--breakpoint-3xl: 2560px;
+
+	--blur-4: 4px;
+}
+
+@utility bg-gradient-custom {
+	background-image: linear-gradient(180deg, #18191b 0%, #0e0f10 53.97%, #131315 100%);
+}
+@utility bg-gradient-about-icon {
+	background-image: linear-gradient(180deg, #18191b 3.3%, #0e0f10 55.49%, #131315 100%);
+}
+@utility bg-card-gradient {
+	background-image: linear-gradient(
+		180deg,
+		rgba(24, 25, 27, 0.7) 0%,
+		rgba(24, 25, 27, 0.651) 7%,
+		rgba(24, 25, 27, 0.651) 41%,
+		rgba(24, 25, 27, 0) 100%
+	);
+}
+@utility bg-dropdown-gradient {
+	background-image: linear-gradient(
+		180deg,
+		rgba(24, 25, 27, 0.8) 3.3%,
+		rgba(14, 15, 16, 0.8) 83.4%,
+		rgba(14, 15, 16, 0.8) 113.02%
+	);
+}
+@utility shadow-custom {
+	box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.8);
+}
+@utility transition-all {
+	transition-property: all;
+}
+@utility transition-transform-opacity {
+	transition-property: transform, opacity;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--primary-green: #00dd95;
+	--secondary-green: #04a16d;
+	--primary-purple: #be96ff;
+	--primary-dark: #010101;
+	--white: #ffffff;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: var(--white);
+	background-color: var(--primary-dark);
+	margin: 0 auto;
+	min-width: 320px;
+	min-height: 100dvh;
+	overflow-x: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	background-image: url('/images/icons/arrow-slide.png') !important;
+	background-position: center !important;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.swiper-button-next {
+	transform: rotate(180deg);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	content: none;
+}
+
+.swiper-button-disabled {
+	opacity: 0.35 !important;
+	filter: grayscale(1) brightness(0.7) !important;
+	cursor: default !important;
+	pointer-events: none !important;
+}
+
+.about-swiper .swiper-pagination {
+	position: relative !important;
+	bottom: -5px !important;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+	filter: grayscale(100%) brightness(50%);
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	height: 460px;
+	box-shadow: 0px 4px 16px 0px #00000066;
+	width: 100%;
+}
+
+.swiper-pagination-bullet {
+	height: 6px;
+	width: 6px;
+	border-radius: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.scrollHidden {
+	overflow-y: auto;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scrollHidden::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Opera */
+}
+
+@media screen and (min-width: 320px) {
+	body {
+		background-image: url('/images/backgrounds/green-px-bg-mobile.webp');
+	}
+}
+
+@media screen and (min-width: 426px) {
+	body {
+		background-image: url('/images/backgrounds/green-px-page-bg.webp');
+	}
+}
+
+/* smooth appear fade effect for pages */
+.fade-in {
+	opacity: 0.6;
+	transform: translateY(3px);
+	transition:
+		opacity 0.3s cubic-bezier(0.4, 0, 0.6, 1),
+		transform 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.fade-in.visible {
+	opacity: 1;
+	transform: translateY(0);
+}

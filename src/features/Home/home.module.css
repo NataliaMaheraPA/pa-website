@@ -1,0 +1,48 @@
+/* smooth appear fade effect for home page */
+.home-fade-in {
+	opacity: 0.1;
+	transform: translateY(1px) scale(0.98);
+	transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-fade-in.visible {
+	opacity: 1;
+	transform: translateY(0) scale(1);
+}
+
+/* slide effect animation */
+@keyframes fadeOutWithSlideLeft {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+		background: rgba(0, 0, 0, 0);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+	to {
+		transform: translateX(-100%);
+		opacity: 0;
+		background: rgba(0, 0, 0, 0.9);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+	}
+}
+
+@keyframes fadeOutWithSlideRight {
+	from {
+		transform: translateX(0);
+		background: rgba(0, 0, 0, 0);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+	to {
+		transform: translateX(100%);
+		opacity: 0;
+		background: rgba(0, 0, 0, 0.9);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+	}
+}
+.slide-out-left {
+	animation: fadeOutWithSlideLeft 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.slide-out-right {
+	animation: fadeOutWithSlideRight 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}

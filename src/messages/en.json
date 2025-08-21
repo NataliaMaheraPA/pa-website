@@ -1,0 +1,554 @@
+{
+	"Home": {
+		"buttonLeft": "About Us",
+		"buttonRight": "Services"
+	},
+	"Navigation": {
+		"about": "About Us",
+		"portfolio": "Portfolio",
+		"contacts": "Contacts",
+		"services": "Services"
+	},
+	"About": {
+		"title": "About <highlight>Us</highlight>.",
+		"slides": [
+			{
+				"title": "MISSION",
+				"description": "Redefine Outsourcing",
+				"p1": "We love outsourcing. This is such a great idea to trade services between people and businesses often in opposite parts of the world.",
+				"p2": "With time, this beautiful idea got very distorted. Both clients and developers are often very unhappy about their remote collaboration.",
+				"p3": "It is our mission to bring joy back to clients and developers."
+			},
+			{
+				"title": "VISION",
+				"description": "Building the World of Opportunities",
+				"p1": "We strive for a world where people regardless of location will enjoy meaningful job opportunities that align with their values, drive transformation, and foster personal and community prosperity.",
+				"p2": "We are very much community-focused. We love being engaged with developers and clients who genuinely care about how their actions impact our communities. We value freedom, autonomy, and responsibility."
+			},
+			{
+				"title": "VALUES",
+				"description": "More than just words: what drives us forward",
+				"p1": "Values aren’t just another website block for us. They’ve helped us grow into a regional leader.",
+				"p2": "We are very much community-focused. We love being engaged with developers and clients who genuinely care about how their actions impact our communities. We value freedom, autonomy, and responsibility.",
+				"p3": "Despite IT’s senseless mechanical image, stability, loyalty, and trust remain key to us."
+			}
+		]
+	},
+	"Portfolio": {
+		"title": "Our <highlight>Portfolio</highlight>.",
+		"text": "view more at <dribbble>dribbble</dribbble> or <behance>behance</behance>",
+		"filterText": "Filtered by:",
+		"buttonText": "Change the filter",
+		"filters": {
+			"all": "All",
+			"educationEdtech": "Education & EdTech",
+			"contentCreationDistributionPlatforms": "Content Creation & Distribution Platforms",
+			"automotive": "Automotive",
+			"inCarEntertainment": "In-Car Entertainment",
+			"mediaEntertainment": "Media & Entertainment",
+			"videoStreamingSolutions": "Video Streaming Solutions",
+			"videoEntertainment": "Video Entertainment Platforms",
+			"smartTvPlatforms": "Smart TV Platforms",
+			"and": "and",
+			"more": "more"
+		}
+	},
+	"ContactUs": {
+		"title": "Contact <highlight>Us</highlight>.",
+		"city1": "Uzhhorod",
+		"city2": "Drohobych",
+		"address1": "Ukrainska, 16",
+		"address2": "Zluka square, 1",
+		"title2": "Contact form",
+		"btn": "Send",
+		"firstNameLastName": "First and last name",
+		"email": "Email",
+		"message": "Write your message here",
+		"validation": {
+			"nameRequired": "Name cannot be empty.",
+			"nameMin": "Name must be at least 2 characters.",
+			"nameMax": "Name cannot exceed 50 characters.",
+			"namePattern": "Name must contain only letters.",
+			"email": "Invalid email.",
+			"textareaRequired": "Message cannot be empty.",
+			"textareaMin": "Message cannot be empty.",
+			"textareaMax": "Message cannot exceed 1000 characters.",
+			"agreementRequired": "You must agree to the Privacy Policy to proceed."
+		},
+		"agreement": "I agree to the <highlight>Privacy Policy</highlight> and consent to the processing of my personal data.",
+		"successMessage": "Form submitted successfully!",
+		"errorMessage": "An error occurred while submitting the form.",
+		"submitting": "Send"
+	},
+	"Services": {
+		"title": "About <highlight>Services</highlight>.",
+		"servicesCardsData": [
+			{
+				"title": "Web Development",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Frontend",
+						"subItems": [
+							{
+								"subTitle": "Languages & Frameworks",
+								"desc": "React, Angular, Vue.js."
+							},
+							{
+								"subTitle": "We use:",
+								"desc": "TailwindCSS, Material-UI, Bootstrap, Vite, StoryBook, Playwright, Turbo, Vanilla, OpenAI, Cognito."
+							}
+						]
+					},
+					{
+						"title": "Backend",
+						"subItems": [
+							{
+								"subTitle": "Languages and frameworks:",
+								"desc": "JavaScript, Python, Typescript, PHP, Ruby, GoLang."
+							},
+							{
+								"subTitle": "Databases:",
+								"desc": "MySQL, PostgreSQL, MongoDB, Redis, TimeScale, DynamoDB, RabbitMQ, ElasticSearch."
+							},
+							{
+								"subTitle": "APIs:",
+								"desc": "RESTful APIs, GraphQL, RPC, WebRTC, gRPC."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Mobile App Development",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Native Development",
+						"subItems": [
+							{
+								"subTitle": "Technologies:",
+								"desc": "Android (Kotlin/Java), iOS (Swift, Objective-C)."
+							}
+						]
+					},
+					{
+						"title": "Cross-Platform Development",
+						"subItems": [
+							{
+								"subTitle": "Technologies:",
+								"desc": "Flutter, React Native."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "TV & Roku Development",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "TV & Roku Development",
+						"subItems": [
+							{
+								"subTitle": "Platforms:",
+								"desc": "Android TV, Fire TV, Tizen, Amazon TV, WebOS, Smart TV (Samsung, LG TV, and others), Roku TV, Apple TV & tvOS"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "UI/UX Design",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Prototypes/Wireframes"
+					},
+					{
+						"title": "Mobile app and Web design"
+					},
+					{
+						"title": "Brand identity from scratch"
+					},
+					{
+						"title": "Redesign"
+					},
+					{
+						"title": "Graphic Design"
+					},
+					{
+						"title": "Animations"
+					}
+				]
+			},
+			{
+				"title": "Software Testing",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Manual Testing"
+					},
+					{
+						"title": "Automation Testing"
+					}
+				]
+			},
+			{
+				"title": "Unity",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Unity",
+						"subItems": [
+							{
+								"subTitle": "Industries:",
+								"desc": "Gaming (Mobile, Desktop, and Console Games), Interactive Learning and Education, Science and Research."
+							},
+							{
+								"subTitle": "We use:",
+								"desc": "Unity Profiler, Addressable System, Job System, DOTween, Cinemachine, Unity Ads / AdMob."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "AR/VR",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "AR/VR",
+						"subItems": [
+							{
+								"subTitle": "Industries:",
+								"desc": "Science and Research, Gaming (AR/VR Games), Interactive Learning and Education, Healthcare Technology."
+							},
+							{
+								"subTitle": "We use:",
+								"desc": "ARKit / ARCore, XR Interaction Toolkit, Vuforia, Oculus SDK / OpenXR."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "DevOps",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "CI/CD",
+						"subItems": [
+							{
+								"subTitle": "We use:",
+								"desc": "Jenkins, GitHub Actions, GitLab Runners"
+							}
+						]
+					},
+					{
+						"title": "Cloud Platforms",
+						"subItems": [
+							{
+								"subTitle": "We use:",
+								"desc": "AWS, Google Cloud Platform (GCP), Microsoft Azure, DigitalOcean, Heroku."
+							}
+						]
+					},
+					{
+						"title": "Containerization & Orchestration",
+						"subItems": [
+							{
+								"subTitle": "We use:",
+								"desc": "Docker, Kubernetes."
+							}
+						]
+					},
+					{
+						"title": "Monitoring",
+						"subItems": [
+							{
+								"subTitle": "We use:",
+								"desc": "UptimeKuma, AWS Cloudwatch."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "IoT",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Wearable IoT"
+					},
+					{
+						"title": "Smart Home IoT"
+					},
+					{
+						"title": "Automotive IoT"
+					}
+				]
+			},
+			{
+				"title": "AI/ML",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Software Developers",
+						"subItems": [
+							{
+								"subTitle": "We use:",
+								"desc": "Python, PyTorch, Tensorflow, Langchain, Langgraph, Vector Databases, Cloud services (AWS Sagemaker, AWS Bedrock, Azure OpenAI)."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Project Management",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Full-time project management"
+					},
+					{
+						"title": "Part-time project management"
+					}
+				]
+			},
+			{
+				"title": "Dedicated Team",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Software Developers"
+					},
+					{
+						"title": "QA Engineers"
+					},
+					{
+						"title": "Project Managers"
+					},
+					{
+						"title": "UI/UX Designers"
+					}
+				]
+			}
+		]
+	},
+	"PrivacyPolicy": {
+		"title": "Privacy <highlight>Policy</highlight>.",
+		"sections": [
+			{
+				"title": "Introduction",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "Welcome to PettersonApps. We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how our organization uses the personal data we collect from you when you use our website."
+					},
+					{
+						"type": "paragraph",
+						"text": "By using our website, you agree to the collection and use of information in accordance with this policy."
+					}
+				]
+			},
+			{
+				"title": "What data do we collect?",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "PettersonApps LLC may collect the following types of information:"
+					},
+					{
+						"type": "list",
+						"items": [
+							{
+								"bold": "Personal Information: ",
+								"text": "Name, email address. (only when you fill out the contact form)."
+							},
+							{
+								"bold": "Cookies & Tracking Technologies: ",
+								"text": "We use cookies and similar tools to improve your experience and analyze usage."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "How do we collect your data?",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "We may use the information we collect to:"
+					},
+					{
+						"type": "list",
+						"items": [
+							"You directly provide PettersonApps LLC with your name and email in contact form on https://pettersonapps.com/contacts",
+							{
+								"text": "PettersonApps LLC may receive information from cookies. You can find out more about our cookie usage in our ",
+								"link": {
+									"text": "Cookie Policy",
+									"href": "/cookie-policy"
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "How will we use your data?",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "PettersonApps LLC collects your data so that we can:"
+					},
+					{
+						"type": "list",
+						"items": [
+							"Facilitate discussions on potential collaboration.",
+							"Address incoming inquiries and requests.",
+							"Analyze website usage statistics.",
+							"We may email you with offers on our services we think you might like."
+						]
+					}
+				]
+			},
+			{
+				"title": "How do we store your data?",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": [
+							"When you submit a contact form on our website, PettersonApps LLC collects your Name, Email address, and Comments content via an API endpoint which is hosted on our server (country of hosting - US) and is forwarded to a designated channel on our company Discord server for internal review. We do not store this data in any database or persistent storage after it is sent. Once transmitted, the data is stored by Discord in accordance with their ",
+							{ "type": "link", "text": "Privacy Policy", "href": "https://discord.com/privacy#3" },
+							", on cloud servers located in various regions worldwide. We do not control the specific locations of Discord’s servers"
+						]
+					},
+					{
+						"type": "paragraph",
+						"text": "PettersonApps LLC retains the information you give us (Name and Email Address) until we determine it is no longer needed for the processing purposes for which we collected it or for legal compliance."
+					}
+				]
+			},
+			{
+				"title": "What are your data protection rights?",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "PettersonApps LLC would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:"
+					},
+					{
+						"type": "list",
+						"items": [
+							"The right to access - You have the right to request PettersonApps LLC for copies of your personal data.",
+							"The right to rectification - You have the right to request that PettersonApps LLC correct any information you believe is inaccurate. You also have the right to request PettersonApps LLC to complete information you believe is incomplete.",
+							"The right to erasure — You have the right to request that PettersonApps LLC erase your personal data, under certain conditions.",
+							"The right to restrict processing - You have the right to request that PettersonApps LLC restrict the processing of your personal data, under certain conditions.",
+							"The right to object to processing - You have the right to object to PettersonApps LLC's processing of your personal data, under certain conditions.",
+							"The right to object to processing - You have the right to object to PettersonApps LLC's processing of your personal data, under certain conditions."
+						]
+					},
+					{
+						"type": "paragraph",
+						"text": "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: info@pettersonapps.com"
+					}
+				]
+			},
+			{
+				"title": "Links to Other Websites",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "The PettersonApps LLC’s website contains links to external platforms, including Behance, Dribble, Instagram, and LinkedIn. If you click these links, you will be directed to third-party sites that have their own privacy policies and data practices, which we do not control. We encourage you to review their policies before interacting with them."
+					}
+				]
+			},
+			{
+				"title": "Changes to PettersonApps LLC’s policy",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "PettersonApps LLC keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 1 April 2025."
+					}
+				]
+			},
+			{
+				"title": "How to contact us",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "If you have any questions about PettersonApps LLC's privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us."
+					},
+					{
+						"type": "paragraph",
+						"text": "Email us at: info@pettersonapps.com"
+					}
+				]
+			}
+		]
+	},
+	"CookiePolicy": {
+		"title": "Cookie <highlight>Policy</highlight>.",
+		"sections": [
+			{
+				"title": "What are cookies?",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "Cookies are text files placed on your computer to collect standard Internet log information and visitor behavior information. When you visit our websites, we may collect information from you automatically through cookies or similar technology."
+					}
+				]
+			},
+			{
+				"title": "What types of cookies do we use?",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "We may use the information we collect to:"
+					},
+					{
+						"type": "list",
+						"items": [
+							"Necessary cookies - PettersonApps LLC uses these cookies to provide the correct function of the website.",
+							"Statistics cookies — PettersonApps LLC uses these cookies to understand how you use our website."
+						]
+					},
+					{
+						"type": "paragraph",
+						"text": "Cookies we collect are:"
+					},
+					{
+						"type": "list",
+						"items": [
+							"_ga - Tracks unique visitors to measure website usage, 2 years, provided by Google Analytics",
+							"_ga_CMT9RCE6GR - Tracks session activity for usage analytics, 2 years, provided by Google Analytics"
+						]
+					}
+				]
+			},
+			{
+				"title": "How to manage cookies",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "You can set your browser not to accept cookies, and the above website tells you how to remove cookies from your browser. However, in a few cases, some of our website features may not function as a result."
+					}
+				]
+			},
+			{
+				"title": "How to contact us",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "If you have any questions about PettersonApps LLC's privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us."
+					},
+					{
+						"type": "paragraph",
+						"text": "Email us at: info@pettersonapps.com"
+					}
+				]
+			}
+		]
+	}
+}

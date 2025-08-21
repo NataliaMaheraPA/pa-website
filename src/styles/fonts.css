@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'Manrope';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+	src: local('Manrope'), url('/fonts/Manrope-Regular.woff2') format('woff2'),
+		url('/fonts/Manrope-Regular.woff') format('woff'), url('/fonts/Manrope-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 500;
+	src: local('Manrope'), url('/fonts/Manrope-Medium.woff2') format('woff2'),
+		url('/fonts/Manrope-Medium.woff') format('woff'), url('/fonts/Manrope-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 600;
+	src: local('Manrope'), url('/fonts/Manrope-SemiBold.woff2') format('woff2'),
+		url('/fonts/Manrope-SemiBold.woff') format('woff'), url('/fonts/Manrope-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ChivoMono';
+	font-display: swap;
+	font-style: italic;
+	font-weight: 500;
+	src: local('ChivoMono'), url('/fonts/ChivoMono-Italic-VariableFont_wght.woff2') format('woff2'),
+		url('/fonts/ChivoMono-Italic-VariableFont_wght.woff') format('woff'),
+		url('/fonts/ChivoMono-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ChivoMono';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 500;
+	src: local('ChivoMono'), url('/fonts/ChivoMono-VariableFont_wght.woff2') format('woff2'),
+		url('/fonts/ChivoMono-VariableFont_wght.woff') format('woff'),
+		url('/fonts/ChivoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'KyivTypeSans';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 500;
+	src: local('KyivTypeSans'), url('/fonts/KyivTypeSans-Medium.woff2') format('woff2'),
+		url('/fonts/KyivTypeSans-Medium.woff') format('woff'), url('/fonts/KyivTypeSans-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: local('Montserrat'), url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+		url('/fonts/Montserrat-Regular.woff') format('woff'), url('/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: local('Montserrat'), url('/fonts/Montserrat-Medium.woff2') format('woff2'),
+		url('/fonts/Montserrat-Medium.woff') format('woff'), url('/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: local('Montserrat'), url('/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+		url('/fonts/Montserrat-SemiBold.woff') format('woff'), url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+}

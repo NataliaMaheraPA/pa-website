@@ -1,0 +1,338 @@
+{
+	"HomePage": {
+		"buttonLeft": "Про Нас",
+		"buttonRight": "Послуги"
+	},
+	"Navigation": {
+		"about": "Про нас",
+		"portfolio": "Портфоліо",
+		"contacts": "Контакти",
+		"services": "Послуги"
+	},
+	"About": {
+		"title": "Про <highlight>Нас</highlight>.",
+		"slides": [
+			{
+				"title": "МІСІЯ",
+				"description": "Переосмислюємо аутсорсинг",
+				"p1": "Ми щиро цінуємо аутсорсинг. Це блискуча ідея, що дає змогу людям і компаніям із різних куточків світу співпрацювати й досягати результатів разом.",
+				"p2": "На жаль, із часом ця чудова ідея зазнала значних спотворень. Сьогодні як клієнти, так і розробники часто стикаються з розчаруванням через труднощі у співпраці на відстані.",
+				"p3": "Наша мета - повернути баланс і задоволення від такої співпраці."
+			},
+			{
+				"title": "ВІЗІЯ",
+				"description": "Будуємо світ можливостей",
+				"p1": "Ми прагнемо створити світ, де кожен, незалежно від місця проживання, матиме доступ до цікавих і значущих робочих можливостей, які змінюватимуть світ на краще, відповідатимуть цінностям і приноситимуть добробут особисто кожному та їхнім громадам.",
+				"p2": "Ми віримо в світ, де жодна ідея не залишиться нереалізованою через брак фахівців із спільними цінностями та натхненням."
+			},
+			{
+				"title": "ЦІННОСТІ",
+				"description": "Більше, ніж просто слова: те, що нас мотивує",
+				"p1": "Цінності для нас — це не просто черговий розділ на сайті. Наші цінності — це те, що допомогло нам побудувати компанію з нуля і стати лідером у нашому регіоні.",
+				"p2": "Ми зосереджені на розвитку спільноти та співпраці з тими, хто піклується, як їхні дії впливають на громади, в яких ми працюємо. Ми цінуємо свободу, автономію, та відповідальне ставлення до своїх обов’язків.",
+				"p3": "Для нас важливі стабільність, лояльність і довіра, навіть у світі, що сприймається як світ бездушних машин."
+			}
+		]
+	},
+	"Portfolio": {
+		"title": "Наше <highlight>Портфоліо</highlight>.",
+		"text": "Дивіться більше на <dribbble>dribbble</dribbble> або <behance>behance</behance>",
+		"filterText": "Відфільтровано за:",
+		"buttonText": "Змінити фільтр",
+		"filters": {
+			"all": "All",
+			"educationEdTech": "Освіта та EdTech",
+			"contentCreationDistributionPlatforms": "Платформи для створення та розповсюдження контенту",
+			"automotive": "Автомобільна галузь",
+			"inCarEntertainment": "Автомобільні розваги",
+			"mediaEntertainment": "Медіа та розваги",
+			"videoStreamingSolutions": "Рішення для потокового відео",
+			"textareaRequired": "Повідомлення не може бути порожнім.",
+			"videoEntertainment": "Відеорозваги",
+			"smartTVPlatforms": "Платформи Smart TV",
+			"and": "і",
+			"more": "більше"
+		}
+	},
+	"ContactUs": {
+		"title": "Зв'язатися з <highlight>Нами</highlight>.",
+		"city1": "Ужгород",
+		"city2": "Дрогобич",
+		"address1": "Українська, 16",
+		"address2": "Площа Злуки, 1",
+		"title2": "Контакти",
+		"btn": "Надіслати",
+		"firstNameLastName": "Ім'я та прізвище",
+		"email": "Електронна пошта",
+		"message": "Текст повідомлення",
+		"validation": {
+			"nameRequired": "Ім'я не може бути порожнім.",
+			"nameMin": "Ім'я має містити щонайменше 2 символи.",
+			"nameMax": "Ім'я не може перевищувати 50 символів.",
+			"namePattern": "Ім'я повинно містити лише літери.",
+			"email": "Невірний формат електронної пошти.",
+			"textareaRequired": "Повідомлення не може бути порожнім.",
+			"textareaMin": "Повідомлення має містити більше 1 символа",
+			"textareaMax": "Повідомлення не може перевищувати 1000 символів."
+		},
+		"successMessage": "Форму успішно надіслано!",
+		"errorMessage": "Сталася помилка під час відправки форми.",
+		"submitting": "Надіслати"
+	},
+	"Services": {
+		"title": "Про <highlight>Послуги</highlight>.",
+		"servicesCardsData": [
+			{
+				"title": "Веб розробка",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Фронтенд:",
+						"subItems": [
+							{
+								"subTitle": "Технології:",
+								"desc": "React, Angular, Vue.js."
+							},
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "TailwindCSS, Material-UI, Bootstrap, Vite, StoryBook, Playwright, Turbo, Vanilla, OpenAI, Cognito."
+							}
+						]
+					},
+					{
+						"title": "Бекенд",
+						"subItems": [
+							{
+								"subTitle": "Технології:",
+								"desc": "JavaScript, Python, Typescript, PHP, Ruby, GoLang."
+							},
+							{
+								"subTitle": "Бази даних:",
+								"desc": "MySQL, PostgreSQL, MongoDB, Redis, TimeScale, DynamoDB, RabbitMQ, ElasticSearch."
+							},
+							{
+								"subTitle": "APIs:",
+								"desc": "RESTful APIs, GraphQL, RPC, WebRTC, gRPC."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Мобільна розробка",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Нативні додатки",
+						"subItems": [
+							{
+								"subTitle": "Технології:",
+								"desc": "Android (Kotlin/Java), iOS (Swift, Objective-C)."
+							}
+						]
+					},
+					{
+						"title": "Кросплатформна розробка",
+						"subItems": [
+							{
+								"subTitle": "Технології:",
+								"desc": "Flutter, React Native."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Розробка для TV & Roku",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Розробка для TV & Roku",
+						"subItems": [
+							{
+								"subTitle": "Платформи:",
+								"desc": "Android TV, Fire TV, Tizen, Amazon TV, WebOS, Smart TV (Samsung, LG TV, and others), Roku TV, Apple TV & tvOS"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "UI/UX Дизайн",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Прототипи та ваєрфрейми"
+					},
+					{
+						"title": "Мобільний та веб дизайн"
+					},
+					{
+						"title": "Айдентика бренду"
+					},
+					{
+						"title": "Редизайн"
+					},
+					{
+						"title": "Графічний дизайн"
+					},
+					{
+						"title": "Анімації"
+					}
+				]
+			},
+			{
+				"title": "Тестування програмного забезпечення",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Ручне тестування"
+					},
+					{
+						"title": "Автоматизоване тестування"
+					}
+				]
+			},
+			{
+				"title": "Unity",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Unity",
+						"subItems": [
+							{
+								"subTitle": "Індустрії:",
+								"desc": "Gaming (Mobile, Desktop, and Console Games), Interactive Learning and Education, Science and Research."
+							},
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "Unity Profiler, Addressable System, Job System, DOTween, Cinemachine, Unity Ads / AdMob."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "AR/VR",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "AR/VR",
+						"subItems": [
+							{
+								"subTitle": "Індустрії:",
+								"desc": "Science and Research, Gaming (AR/VR Games), Interactive Learning and Education, Healthcare Technology."
+							},
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "ARKit / ARCore, XR Interaction Toolkit, Vuforia, Oculus SDK / OpenXR."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "DevOps",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "CI/CD",
+						"subItems": [
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "Jenkins, GitHub Actions, GitLab Runners"
+							}
+						]
+					},
+					{
+						"title": "Cloud Platforms",
+						"subItems": [
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "AWS, Google Cloud Platform (GCP), Microsoft Azure, DigitalOcean, Heroku."
+							}
+						]
+					},
+					{
+						"title": "Containerization & Orchestration",
+						"subItems": [
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "Docker, Kubernetes."
+							}
+						]
+					},
+					{
+						"title": "Monitoring",
+						"subItems": [
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "UptimeKuma, AWS Cloudwatch."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Інтернет речей",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Wearable IoT"
+					},
+					{
+						"title": "Smart Home IoT"
+					},
+					{
+						"title": "Automotive IoT"
+					}
+				]
+			},
+			{
+				"title": "AI/ML",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Software Developers",
+						"subItems": [
+							{
+								"subTitle": "Працюємо з:",
+								"desc": "Python, PyTorch, Tensorflow, Langchain, Langgraph, Vector Databases, Cloud services (AWS Sagemaker, AWS Bedrock, Azure OpenAI)."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Проєктний менеджмент",
+				"subTitle": "Послуга",
+				"accordionItems": [
+					{
+						"title": "Проєктний менеджмент full-time"
+					},
+					{
+						"title": "Проєктний менеджмент part-time "
+					}
+				]
+			},
+			{
+				"title": "Dedicated Team",
+				"subTitle": "Service",
+				"accordionItems": [
+					{
+						"title": "Розробники"
+					},
+					{
+						"title": "QA інженери"
+					},
+					{
+						"title": "Проєктні менеджери"
+					},
+					{
+						"title": "UI/UX Дизайнери"
+					}
+				]
+			}
+		]
+	}
+}
