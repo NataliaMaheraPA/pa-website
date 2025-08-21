@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
 import { Locale, routing } from '@/lib/i18n/routing'
 import { notFound } from 'next/navigation'
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -10,36 +11,37 @@ import AuthWrapper from '@/components/AuthWrapper'
 import PreloadImages from '@/components/PreloadImagesWrapper'
 import JsonLd from '@/components/JsonLd'
 import images from '@/features/Portfolio/constants'
-import { defaultDescription, defaultKeywords, defaultTitle, organization, siteName, siteUrl, webSite } from '@/config/seo'
+import { defaultDescription, defaultKeywords, defaultTitle, organization, siteName, webSite } from '@/config/seo'
 
 import '@/styles/globals.css'
 
-export const metadata: Metadata = {
-	metadataBase: new URL(siteUrl),
-	title: defaultTitle,
-	description: defaultDescription,
-	keywords: defaultKeywords,
-	icons: {
-		icon: [{ url: '/favicon.ico' }, { url: '/favicon.png', type: 'image/png' }],
-	},
-	alternates: { canonical: '/' },
-	openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+	const hdrs = await headers()
+	const host = hdrs.get('x-forwarded-host') || hdrs.get('host') || 'pettersonapps.com'
+	const proto = hdrs.get('x-forwarded-proto') || 'https'
+	const origin = `${proto}://${host}`
+
+	return {
+		metadataBase: new URL(origin),
 		title: defaultTitle,
 		description: defaultDescription,
-		url: '/',
-		siteName: siteName,
-		type: 'website',
-		images: [
-			{ url: '/opengraph-image', width: 1200, height: 630, alt: `${siteName} Open Graph image` },
-		],
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: defaultTitle,
-		description: defaultDescription,
-		images: ['/opengraph-image'],
-	},
-	robots: { index: true, follow: true },
+		keywords: defaultKeywords,
+		icons: {
+			icon: [{ url: '/favicon.ico' }, { url: '/favicon.png', type: 'image/png' }],
+		},
+		alternates: { canonical: '/' },
+		openGraph: {
+			title: defaultTitle,
+			description: defaultDescription,
+			url: '/',
+			siteName: siteName,
+			type: 'website',
+			images: [
+				{ url: `${origin}/opengraph-image`, width: 1200, height: 630, alt: `${siteName} Open Graph image` },
+			],
+		},
+		robots: { index: true, follow: true },
+	}
 }
 
 export const viewport: Viewport = {
