@@ -3,8 +3,8 @@ export const siteName = 'PettersonApps'
 export const defaultTitle = 'PettersonApps - Software Development Company'
 export const defaultDescription = 'Software development company from Ukraine.'
 
- // We can add a default company image for the open graph
-export const ogImage = `${siteUrl}/images/og-default.jpg`
+ // Default Open Graph/Twitter image. Use an existing asset so previews always render.
+export const ogImage = `${siteUrl}/favicon.png`
 
 export const defaultKeywords = [
   'software development',
