@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { headers } from 'next/headers'
 import { Locale, routing } from '@/lib/i18n/routing'
 import { notFound } from 'next/navigation'
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -11,7 +10,7 @@ import AuthWrapper from '@/components/AuthWrapper'
 import PreloadImages from '@/components/PreloadImagesWrapper'
 import JsonLd from '@/components/JsonLd'
 import images from '@/features/Portfolio/constants'
-import { defaultDescription, defaultKeywords, defaultTitle, organization, siteName, webSite } from '@/config/seo'
+import { ogImage, defaultDescription, defaultKeywords, defaultTitle, organization, siteName, siteUrl, webSite } from '@/config/seo'
 
 import '@/styles/globals.css'
 
@@ -23,31 +22,24 @@ export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-	const h = await headers()
-	const host = h.get('x-forwarded-host') ?? h.get('host') ?? 'localhost:3000'
-	const proto = h.get('x-forwarded-proto') ?? (host.includes('localhost') ? 'http' : 'https')
-	const base = `${proto}://${host}`
-
-	return {
-		metadataBase: new URL(base),
+export const metadata: Metadata = {
+	metadataBase: new URL(siteUrl),
+	title: defaultTitle,
+	description: defaultDescription,
+	keywords: defaultKeywords,
+	icons: {
+		icon: [{ url: '/favicon.ico' }, { url: '/favicon.png', type: 'image/png' }],
+	},
+	alternates: { canonical: '/' },
+	openGraph: {
 		title: defaultTitle,
 		description: defaultDescription,
-		keywords: defaultKeywords,
-		icons: {
-			icon: [{ url: '/favicon.ico' }, { url: '/favicon.png', type: 'image/png' }],
-		},
-		alternates: { canonical: '/' },
-		openGraph: {
-			title: defaultTitle,
-			description: defaultDescription,
-			url: '/',
-			siteName: siteName,
-			type: 'website',
-			images: [{ url: '/favicon-social.png', width: 1200, height: 630, alt: `${siteName} Open Graph image` }],
-		},
-		robots: { index: true, follow: true },
-	}
+		url: '/',
+		siteName: siteName,
+		type: 'website',
+		images: [{ url: ogImage, width: 1200, height: 630, alt: `${siteName} Open Graph image` }],
+	},
+	robots: { index: true, follow: true },
 }
 
 export const viewport: Viewport = {
