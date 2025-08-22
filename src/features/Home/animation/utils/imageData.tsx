@@ -4,7 +4,7 @@ import { getResponsiveSettings } from './responsiveSettings'
 
 export function extractImageData(word: string, ctx: CanvasRenderingContext2D) {
 	const { fontSize } = getResponsiveSettings(window.innerWidth, ctx.canvas.height)
-	ctx.font = `bold ${fontSize}px KyivTypeSans`
+	ctx.font = `bold ${fontSize}px KyivTypeSans, Montserrat, sans-serif`
 	ctx.textAlign = 'center'
 	ctx.textBaseline = 'middle'
 	ctx.fillStyle = 'white'

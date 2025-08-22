@@ -1,17 +1,20 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { useFontsReady } from '@/hooks/useFontsReady'
 import { AnimationState } from '../animation/types'
 import { drawParticle, updateParticle } from '../animation/utils/createParticle'
-import { createFontFace } from '../animation/utils/createFontFace'
 import { resizeCanvas } from '../animation/utils/resizeCanvas'
 import { createParticlesFromText } from '../animation/utils/createParticlesFromText'
+import LoadingOverlay from './LoadingOverlay'
 
 const words = ['Design', 'Develop', 'Build']
 
 export default function ParticleText() {
 	const canvasRef = useRef<HTMLCanvasElement | null>(null)
-	const [fontLoaded, setFontLoaded] = useState(false)
+	const [isReady, setIsReady] = useState(false)
+	const hasDrawnRef = useRef(false)
+	const fontsReady = useFontsReady(['500 1em KyivTypeSans'])
 
 	const [animationState, setAnimationState] = useState<AnimationState>({
 		currentWordIndex: 0,
@@ -39,21 +42,15 @@ export default function ParticleText() {
 		})
 	}, [getCanvasContext])
 
-	// Initialize the canvas
+	// Do not generate particles until fonts are ready. Height is reserved via wrapper.
 	useEffect(() => {
-		const canvas = canvasRef.current
-		if (!canvas) return
-
-		createFontFace()
-			.then(() => {
-				setFontLoaded(true)
-				handleResize()
-			})
-			.catch(err => console.error('Failed to load font:', err))
-	}, [fontLoaded, handleResize])
+		if (!fontsReady) return
+		handleResize()
+	}, [fontsReady, handleResize])
 
 	// Word cycling
 	useEffect(() => {
+		if (!fontsReady) return
 		const intervalId = setInterval(() => {
 			setAnimationState(prevState => {
 				const nextIndex = words.length === prevState.currentWordIndex + 1 ? 0 : prevState.currentWordIndex + 1
@@ -69,7 +66,7 @@ export default function ParticleText() {
 		}, 3000)
 
 		return () => clearInterval(intervalId)
-	}, [getCanvasContext])
+	}, [getCanvasContext, fontsReady])
 
 	// Handle resizing on window resize
 	useEffect(() => {
@@ -81,6 +78,7 @@ export default function ParticleText() {
 	useEffect(() => {
 		const ctx = getCanvasContext()
 		if (!ctx) return
+		if (!fontsReady) return
 
 		let animationFrameId: number
 
@@ -90,13 +88,25 @@ export default function ParticleText() {
 				updateParticle(particle)
 				drawParticle(particle, ctx)
 			})
+			if (!hasDrawnRef.current && animationState.particles.length > 0) {
+				hasDrawnRef.current = true
+				setIsReady(true)
+			}
 			animationFrameId = requestAnimationFrame(animate)
 		}
 
 		animate()
 
 		return () => cancelAnimationFrame(animationFrameId)
-	}, [animationState.particles, getCanvasContext])
+	}, [animationState.particles, getCanvasContext, fontsReady])
 
-	return <canvas ref={canvasRef} className='min-h-[450px]' />
+	return (
+		<div className='relative w-full min-h-[450px]'>
+			<canvas
+				ref={canvasRef}
+				className={`w-full h-full transition-opacity duration-500 ${isReady ? 'opacity-100' : 'opacity-0'}`}
+			/>
+			<LoadingOverlay isHidden={isReady} />
+		</div>
+	)
 }

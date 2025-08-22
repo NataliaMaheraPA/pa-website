@@ -176,3 +176,13 @@ body {
 	opacity: 1;
 	transform: translateY(0);
 }
+
+/* shimmer loading animation for home page */
+@keyframes shimmer {
+	0% {
+		transform: translateX(-60%);
+	}
+	100% {
+		transform: translateX(60%);
+	}
+}
