@@ -6,11 +6,19 @@ import { NextIntlClientProvider } from 'next-intl'
 import { ToastContainer } from 'react-toastify'
 import Header from '@/components/Header'
 import { styleToastify } from '@/components/Toaster'
-import AuthWrapper from '@/components/AuthWrapper'
 import PreloadImages from '@/components/PreloadImagesWrapper'
 import JsonLd from '@/components/JsonLd'
 import images from '@/features/Portfolio/constants'
-import { ogImage, defaultDescription, defaultKeywords, defaultTitle, organization, siteName, siteUrl, webSite } from '@/config/seo'
+import {
+	ogImage,
+	defaultDescription,
+	defaultKeywords,
+	defaultTitle,
+	organization,
+	siteName,
+	siteUrl,
+	webSite,
+} from '@/config/seo'
 
 import '@/styles/globals.css'
 
@@ -19,7 +27,7 @@ export const revalidate = false
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return routing.locales.map(locale => ({ locale }))
+	return routing.locales.map(locale => ({ locale }))
 }
 
 export const metadata: Metadata = {
@@ -71,18 +79,16 @@ export default async function RootLayout({
 	return (
 		<html lang={locale} data-scroll-behavior='smooth'>
 			<body className='antialiased flex flex-col min-h-full md:min-h-screen'>
-				<AuthWrapper>
-					<PreloadImages urls={imageUrls} />
-					<NextIntlClientProvider messages={messages}>
-						<Header />
-						<main className='flex-1 overflow-y-hidden'>
-							<JsonLd data={organization} />
-							<JsonLd data={webSite} />
-							{children}
-						</main>
-						<ToastContainer {...styleToastify} />
-					</NextIntlClientProvider>
-				</AuthWrapper>
+				<PreloadImages urls={imageUrls} />
+				<NextIntlClientProvider messages={messages}>
+					<Header />
+					<main className='flex-1 overflow-y-hidden'>
+						<JsonLd data={organization} />
+						<JsonLd data={webSite} />
+						{children}
+					</main>
+					<ToastContainer {...styleToastify} />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	)
