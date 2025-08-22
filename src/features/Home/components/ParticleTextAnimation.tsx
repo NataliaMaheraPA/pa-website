@@ -6,7 +6,6 @@ import { AnimationState } from '../animation/types'
 import { drawParticle, updateParticle } from '../animation/utils/createParticle'
 import { resizeCanvas } from '../animation/utils/resizeCanvas'
 import { createParticlesFromText } from '../animation/utils/createParticlesFromText'
-import LoadingOverlay from './LoadingOverlay'
 
 const words = ['Design', 'Develop', 'Build']
 
