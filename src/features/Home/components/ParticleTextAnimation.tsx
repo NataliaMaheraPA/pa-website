@@ -106,7 +106,6 @@ export default function ParticleText() {
 				ref={canvasRef}
 				className={`w-full h-full transition-opacity duration-500 ${isReady ? 'opacity-100' : 'opacity-0'}`}
 			/>
-			<LoadingOverlay isHidden={isReady} />
 		</div>
 	)
 }
