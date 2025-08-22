@@ -21,6 +21,7 @@ import {
 } from '@/config/seo'
 
 import '@/styles/globals.css'
+import Script from 'next/script'
 
 export const dynamic = 'error'
 export const revalidate = false
@@ -86,6 +87,11 @@ export default async function RootLayout({
 						<JsonLd data={organization} />
 						<JsonLd data={webSite} />
 						{children}
+						<Script
+							id='cookieyes'
+							type='text/javascript'
+							src='https://cdn-cookieyes.com/client_data/64545f7822ba7dcdde3c3720/script.js'
+						/>
 					</main>
 					<ToastContainer {...styleToastify} />
 				</NextIntlClientProvider>
