@@ -3,9 +3,11 @@ import { Locale, routing } from '@/lib/i18n/routing'
 import { notFound } from 'next/navigation'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
+import Script from 'next/script'
 import { ToastContainer } from 'react-toastify'
 import Header from '@/components/Header'
 import { styleToastify } from '@/components/Toaster'
+import AuthWrapper from '@/components/AuthWrapper'
 import PreloadImages from '@/components/PreloadImagesWrapper'
 import JsonLd from '@/components/JsonLd'
 import images from '@/features/Portfolio/constants'
@@ -21,7 +23,6 @@ import {
 } from '@/config/seo'
 
 import '@/styles/globals.css'
-import Script from 'next/script'
 
 export const dynamic = 'error'
 export const revalidate = false
@@ -80,21 +81,24 @@ export default async function RootLayout({
 	return (
 		<html lang={locale} data-scroll-behavior='smooth'>
 			<body className='antialiased flex flex-col min-h-full md:min-h-screen'>
-				<PreloadImages urls={imageUrls} />
-				<NextIntlClientProvider messages={messages}>
-					<Header />
-					<main className='flex-1 overflow-y-hidden'>
-						<JsonLd data={organization} />
-						<JsonLd data={webSite} />
-						{children}
-						<Script
-							id='cookieyes'
-							type='text/javascript'
-							src='https://cdn-cookieyes.com/client_data/64545f7822ba7dcdde3c3720/script.js'
-						/>
-					</main>
-					<ToastContainer {...styleToastify} />
-				</NextIntlClientProvider>
+				<AuthWrapper>
+					<PreloadImages urls={imageUrls} />
+					<NextIntlClientProvider messages={messages}>
+						<Header />
+						<main className='flex-1 overflow-y-hidden'>
+							<JsonLd data={organization} />
+							<JsonLd data={webSite} />
+							{children}
+							{/* Need to add prod or dev cookieyes script here */}
+							<Script
+								id='cookieyes'
+								type='text/javascript'
+								src='https://cdn-cookieyes.com/client_data/64545f7822ba7dcdde3c3720/script.js'
+							/>
+						</main>
+						<ToastContainer {...styleToastify} />
+					</NextIntlClientProvider>
+				</AuthWrapper>
 			</body>
 		</html>
 	)
